@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Address</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Shipping Address</h1>
+    <form id="shipping-form">
+        <!-- Full Name -->
+        <label for="full-name">Full Name:</label><br>
+        <input type="text" id="full-name" name="full-name" required><br><br>
+      
+        <!-- Address -->
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" required></textarea><br><br>
+      
+        <!-- City -->
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" required><br><br>
+      
+        <!-- State -->
+        <label for="state">State/Region:</label><br>
+        <input type="text" id="state" name="state" required><br><br>
+      
+        <!-- Postal Code -->
+        <label for="postal-code">Postal Code:</label><br>
+        <input type="text" id="postal-code" name="postal-code" required pattern="^\d{5,6}$" title="Postal code must be 5 or 6 digits"><br><br>
+      
+        <!-- Phone -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required pattern="^\d{10,15}$" title="Phone number must be between 10 to 15 digits"><br><br>
+      
+        <button type="submit">Proceed to Payment</button>
+      </form>
+      
+  </div>
+
+  <script src="scripts.js">
+    const shippingForm = document.getElementById('shipping-form');
+
+    shippingForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Gather form data
+      const formData = new FormData(shippingForm);
+      const shippingDetails = Object.fromEntries(formData.entries());
+
+      // Store shipping details in localStorage or pass to the backend
+      localStorage.setItem('shippingDetails', JSON.stringify(shippingDetails));
+
+      // Redirect to the payment page
+      window.location.href = "checkout.html"; // Adjust to your payment page
+    });
+  </script>
+</body>
+</html>

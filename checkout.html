@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .checkout-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .checkout-container h2 {
+      margin-bottom: 20px;
+    }
+    .product-details {
+      margin-bottom: 20px;
+    }
+    .payment-methods {
+      text-align: left;
+      margin: 20px 0;
+    }
+    .payment-method {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .payment-method input[type="radio"] {
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+
+    <div class="product-details">
+      <p id="product-name"></p>
+      <p id="product-price"></p>
+    </div>
+
+    <div class="payment-methods">
+      <h3>Select Payment Method:</h3>
+      <div class="payment-method">
+        <input type="radio" id="transfer" name="payment-method" value="Bank Transfer" checked>
+        <label for="transfer">Bank Transfer</label>
+      </div>
+      <div class="payment-method">
+        <input type="radio" id="card" name="payment-method" value="Credit/Debit Card">
+        <label for="card">Credit/Debit Card</label>
+      </div>
+      <div class="payment-method">
+        <input type="radio" id="wallet" name="payment-method" value="Wallet">
+        <label for="wallet">Wallet</label>
+      </div>
+      <div class="payment-method">
+        <input type="radio" id="cash" name="payment-method" value="Cash on Delivery">
+        <label for="cash">Cash on Delivery</label>
+      </div>
+    </div>
+    <div class="container">
+        <h1>Shipping Address</h1>
+        <form id="shipping-form">
+            <!-- Full Name -->
+            <label for="full-name">Full Name:</label><br>
+            <input type="text" id="full-name" name="full-name" required><br><br>
+          
+            <!-- Address -->
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" required></textarea><br><br>
+          
+            <!-- City -->
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city" required><br><br>
+          
+            <!-- State -->
+            <label for="state">State/Region:</label><br>
+            <input type="text" id="state" name="state" required><br><br>
+          
+            <!-- Postal Code -->
+            <label for="postal-code">Postal Code:</label><br>
+            <input type="text" id="postal-code" name="postal-code" required pattern="^\d{5,6}$" title="Postal code must be 5 or 6 digits"><br><br>
+          
+            <!-- Phone -->
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" required pattern="^\d{10,15}$" title="Phone number must be between 10 to 15 digits"><br><br>
+          
+            <button type="submit">Verify</button>
+          </form>
+          
+      </div>
+    
+      <script src="scripts.js">
+        const shippingForm = document.getElementById('shipping-form');
+    
+        shippingForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          // Gather form data
+          const formData = new FormData(shippingForm);
+          const shippingDetails = Object.fromEntries(formData.entries());
+    
+          // Store shipping details in localStorage or pass to the backend
+          localStorage.setItem('shippingDetails', JSON.stringify(shippingDetails));
+    
+          // Redirect to the payment page
+          window.location.href = "checkout.html"; // Adjust to your payment page
+        });
+      </script>
+
+    <button id="proceed-button" onclick="proceedToPayment()">Proceed to Payment</button>
+  </div>
+
+  <script src="scripts.js">
+   
+  </script>
+</body>
+</html>

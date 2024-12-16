@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="product-carousel">
+        <div class="product-item">
+            <img src="charger.jpg" alt="Product 1">
+            <h3>Samsung Charger 45W SUPER FAST</h3>
+            <p>#5,900</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          <div class="product-item">
+            <img src="charger1.jpg" alt="Product 1">
+            <h3>Itel 5W Charger With free Cable.</h3>
+            <p>#2,990</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          <div class="product-item">
+            <img src="charger2.jpg" alt="Product 1">
+            <h3>SAMSUNG CHARGER TYPE C</h3>
+            <p>#4,900</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          <div class="product-item">
+            <img src="charger3.jpg" alt="Product 1">
+            <h3>Usb Android Smartphones fast charger.</h3>
+            <p>#2,900</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          <div class="product-item">
+            <img src="charger4.jpg" alt="Product 1">
+            <h3>Type C To iphone 14/13/12/11/XR/ Pro max</h3>
+            <p>#5200</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          
+    </div>
+    <div class="product-carousel">
+        <div class="product-item">
+            <img src="charger.jpg" alt="Product 1">
+            <h3>Samsung Charger 45W SUPER FAST</h3>
+            <p>#5,900</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          <div class="product-item">
+            <img src="charger1.jpg" alt="Product 1">
+            <h3>Itel 5W Charger With free Cable.</h3>
+            <p>#2,990</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          <div class="product-item">
+            <img src="charger2.jpg" alt="Product 1">
+            <h3>SAMSUNG CHARGER TYPE C</h3>
+            <p>#4,900</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          <div class="product-item">
+            <img src="charger3.jpg" alt="Product 1">
+            <h3>Usb Android Smartphones fast charger.</h3>
+            <p>#2,900</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          <div class="product-item">
+            <img src="charger4.jpg" alt="Product 1">
+            <h3>Type C To iphone 14/13/12/11/XR/ Pro max</h3>
+            <p>#5200</p>
+            <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+            <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+          </div>
+          
+    </div>
+    
+    <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartCount">0</span> <!-- Cart count -->
+      </div>
+      
+      <!-- Cart Sidebar (Initially hidden) -->
+      <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <button id="closeCart" class="close-btn">X</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <!-- Cart items will appear here -->
+          <p>No items in the cart</p>
+        </div>
+        <div class="cart-footer">
+          <p>Total: <span id="totalPrice">$0</span></p>
+          <button class="btn">Checkout</button>
+        </div>
+      </div>
+      <!-- Floating Cart Icon -->
+      <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartCount">0</span> <!-- Cart count -->
+      </div>
+      
+      <!-- Cart Sidebar (Initially hidden) -->
+      <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <button id="closeCart" class="close-btn">X</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <!-- Cart items will appear here -->
+          <p>No items in the cart</p>
+        </div>
+        <div class="cart-footer">
+          <p>Total: <span id="totalPrice">$0</span></p>
+          <button class="btn">Checkout</button>
+        </div>
+      </div>
+      
+        <!-- Bottom Navigation Bar (same as the one on the main page) -->
+        <div class="navbar">
+          <a href="index.html">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="javascript:void(0);" id="shopLink">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Shop</span>
+          </a>
+          <a href="#about">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+          </a>
+          <a href="index1.html">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>

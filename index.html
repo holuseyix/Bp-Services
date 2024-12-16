@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bernard Pro Services</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Bernard Pro Services</h1>
+      <p>Your ultimate destination for phones and accessories!</p>
+      <div class="cta-buttons">
+        <a href="javascript:void(0);" class="btn" id="shopBtn">Shop Now</a>
+        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Categories Slide-in Menu -->
+<div class="shop-menu" id="shopMenu">
+    <div class="shop-category" id="phonesLink">
+      <i class="fas fa-mobile-alt"></i>
+      <span>Phones</span>
+    </div>
+  
+    <!-- Phone Brands (Initially hidden) -->
+    <div class="phone-brands" id="phoneBrands" style="display: none;">
+      <h3>Phone Brands</h3>
+      <div class="brands">
+        <a href="index9.html" class="brand">Tecno</a>
+        <a href="index2.html" class="brand">Itel</a>
+        <a href="index7.html" class="brand">Redmi</a>
+        <a href="index4.html" class="brand">iPhone</a>
+        <a href="index8.html" class="brand">Samsung</a>
+        <a href="index6.html" class="brand">Realme</a>
+        <a href="index3.html" class="brand">Infinix</a>
+        <a href="others.html" class="brand">Others</a>
+      </div>
+    </div>
+  
+    <!-- Other Shop Categories (unchanged) -->
+    <div class="shop-category">
+      <i class="fas fa-tablet-alt" ></i>
+      <a href="tablet.html" class="link"><span>Tablets</span></a>
+    </div>
+    <div class="shop-category">
+      <i class="fas fa-plug"></i>
+    <a href="charger.html" class="link"><span>Chargers</span></a>
+    </div>
+    <div class="shop-category">
+      <i class="fas fa-watch"></i>
+      <a href="Smart-Watch.html" class="link"><span>Smart Watch</span></a>
+    </div>
+    <div class="shop-category">
+      <i class="fas fa-headphones-alt"></i>
+      <a href="Headphone.html" class="link"><span>Headphones</span></a>
+    </div>
+    <div class="shop-category">
+      <i class="fas fa-music"></i>
+      <a href="mp3.html" class="link"><span>MP3</span></a>
+    </div>
+    <div class="shop-category">
+      <i class="fas fa-bag"></i>
+      <span>Pouch</span>
+    </div>
+    <div class="shop-category">
+      <i class="fas fa-bag"></i>
+      <span>Others</span>
+    </div>
+  </div>
+  
+    <!-- Search Bar -->
+    <section class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products..." oninput="liveSearch()">
+    </section>
+  
+    <!-- Trending Categories -->
+    <section class="trending-categories">
+      <h2>Explore Popular Categories</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <img src="58da776c-34d0-4c9a-add7-4d2778a154b2.jpeg" alt="Phones">
+          <p>Phones</p>
+        </div>
+        <div class="category-card">
+          <img src="fbfd5917-c06f-4e51-938a-8ad561aa3337.jpeg" alt="Accessories">
+          <p>Accessories</p>
+        </div>
+        <div class="category-card">
+          <img src="Lockable Wall Mounted Tablet & iPad Holder - Black.jpeg" alt="Tablets">
+          <p>Tablets</p>
+        </div>
+        <!-- Add more categories -->
+      </div>
+    </section>
+  
+    <!-- Promotional Banner -->
+    <section class="promo-banner">
+      <h2>Special Offer: Up to 30% Off Selected Products!</h2>
+      <a href="#shop" class="btn">Shop Now</a>
+    </section>
+  
+    <!-- Live Statistics -->
+    <section class="stats">
+      <div class="stat-item">
+        <h3>10,000+</h3>
+        <p>Happy Customers</p>
+      </div>
+      <div class="stat-item">
+        <h3>500+</h3>
+        <p>Products Available</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Support</p>
+      </div>
+    </section>
+  
+    <!-- Scrolling Announcement -->
+    <div class="marquee">
+      <p>🚚 Free Shipping on Orders Over $50! | 🛒 Buy Now and Pay Later with Easy Buy!</p>
+    </div>
+  
+    <!-- Video Introduction -->
+    <section class="intro-video">
+      <h2>Discover Phone Galaxy</h2>
+      <video controls>
+        <source src="Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </section>
+  
+    <!-- Featured Products -->
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-carousel">
+        <div class="product-item">
+          <img src="iphone 15 pro max best edition.jpeg" alt="Product 1">
+          <h3>iPhone 14 Pro</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="i14pro.jpeg" alt="Product 1">
+          <h3>iPhone 13 Pro</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 13 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 13 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="spark30pro.jpeg" alt="Product 1">
+          <h3>  Tecno Spark 30 Pro</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'Tecno Spark 30 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('Tecno Spark 30 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Tecno Launches Camera-Centric Camon 30 5G Series in India.jpeg" alt="Product 1">
+          <h3>Tecno Camon 30</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="iphone15.jpg" alt="Product 1">
+          <h3>iPhone 15 Pro Max</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="redminote14pro.jpeg" alt="Product 1">
+          <h3>Redmi Note 14 Pro</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="infinixnote.jpg" alt="Product 1">
+          <h3>Infinix Note 40 Pro</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Samsung Galaxy S24 Ultra.jpeg" alt="Product 1">
+          <h3>Samsung S24 ultra</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Smartphone Infinix Smart 8 Pro 6_6 Hd+ 90Hz 256Gb 4Gb Ram Câmera Dupla.jpeg" alt="Product 1">
+          <h3>Infinix smart 8</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="TECNO POP 9 5G_ Mượt mà, nhanh chóng, giá rẻ bất….jpeg" alt="Product 1">
+          <h3>Tecno Pop 9</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="smart9.jpeg" alt="Product 1">
+          <h3>Infinix Smart 9</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Smartphone Tecno Spark 20 Pro Plus 256 Gb Branco 8 Gb Ram.jpeg" alt="Product 1">
+          <h3>Tecno Spark 20 pro plus</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Xiaomi Redmi 14C Noir 128Go avec Forfait 5G.jpg" alt="Product 1">
+          <h3>Redmi 14c</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Fashion Caseing For Infinix Hot 50 Pro 4G X6881 Pro+ Plus X6880 Matte Black Soft TPU Protective Back.jpeg" alt="Product 1">
+          <h3>Infinix Hot 50 pro plus</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+        </div>
+        <div class="product-item">
+          <img src="Experience top-notch features without breaking the….jpeg" alt="Product 1">
+          <h3>Itel P65</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Smartphone Realme Note 50 4Go 128Go Noir.jpeg" alt="Product 1">
+          <h3>Realme Note 50 pro</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Descubre la potencia y elegancia del Redmi Note 13….jpeg" alt="Product 1">
+          <h3>Redmi Note 13 pro</h3>
+          <p>$999</p>
+          <button class="btn" onclick="addToCart({name: 'iPhone 14 Pro', price: 999})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <div class="product-item">
+          <img src="Itel S25 Ultra 4G key specs and official renders leaked ahead of launch.jpeg" alt="Product 2">
+          <h3>Itel  S25</h3>
+          <p>$899</p>
+          <button class="btn" onclick="addToCart({name: 'Samsung Galaxy S23', price: 899})">Add to Cart</button>
+          <button class="buyNow" onclick="buyNow('iphone 14 Pro', 999)">Buy Now</button>
+        </div>
+        <!-- Add more products here -->
+      </div>
+    </section>
+    
+  
+    <!-- Key Highlights -->
+    <section class="highlights">
+      <h2>Why Choose Us?</h2>
+      <div class="highlight-items">
+        <div class="highlight-item">
+          <img src="Premium Vector _ Delivery man riding red scooter illustration.jpeg" alt="Free Delivery" width="55px" height="90px">
+          <h3>Free Delivery</h3>
+          <p>Get your products delivered fast and free.</p>
+        </div>
+        <div class="highlight-item">
+          <img src="Vetor de estrela de círculo azul de marca de verificação de verificação Ícone isolado no fundo branco _ Vetor Premium.jpeg" alt="Quality Guarantee" width="55px" height="90px">
+          <h3>Quality Guarantee</h3>
+          <p>Only genuine and high-quality products.</p>
+        </div>
+        <div class="highlight-item">
+          <img src="Support 24_7 Icon in Flat Style Vector for Apps, UI, Websites_ Black Icon Vector Illustration Stock Vector - Illustration of open, isolated_ 167117743.jpeg" alt="Customer Support" width="55px" height="90px">
+          <h3>24/7 Support</h3>
+          <p>We’re here to help anytime you need us.</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-item">
+        <p>"Great store! Got my phone delivered the next day."</p>
+        <h4>- Sarah K.</h4>
+      </div>
+      <div class="testimonial-item">
+        <p>"Excellent customer service and quality products!"</p>
+        <h4>- John D.</h4>
+      </div>
+      <!-- Add more testimonials -->
+    </section>
+    
+  
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Sign up for exclusive deals and updates.</p>
+      <form id="newsletterForm">
+        <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+  </section>
+  
+  <!-- Floating Cart Icon -->
+<div class="cart-icon" id="cartIcon">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cartCount">0</span> <!-- Cart count -->
+</div>
+
+<!-- Cart Sidebar (Initially hidden) -->
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart" class="close-btn">X</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <!-- Cart items will appear here -->
+    <p>No items in the cart</p>
+  </div>
+  <div class="cart-footer">
+    <p>Total: <span id="totalPrice">$0</span></p>
+    <button class="btn">Checkout</button>
+  </div>
+</div>
+
+  <!-- Bottom Navigation Bar -->
+  <div class="bottom-nav-bar">
+    <a href="#home">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="javascript:void(0);" id="shopLink">
+      <i class="fas fa-shopping-cart"></i>
+      <span>Shop</span>
+    </a>
+    <a href="#about">
+      <i class="fas fa-info-circle"></i>
+      <span>About</span>
+    </a>
+    <a href="index1.html">
+      <i class="fas fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

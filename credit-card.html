@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit/Debit Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Credit/Debit Card Payment</h1>
+    <form action="process-payment" method="post">
+      <label for="card-number">Card Number:</label><br>
+      <input type="text" id="card-number" name="card-number" required><br><br>
+      <label for="expiry-date">Expiry Date:</label><br>
+      <input type="month" id="expiry-date" name="expiry-date" required><br><br>
+      <label for="cvv">CVV:</label><br>
+      <input type="password" id="cvv" name="cvv" required><br><br>
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+</body>
+</html>

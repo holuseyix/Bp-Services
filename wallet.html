@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet Payment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Wallet Payment</h1>
+    <p>Use your wallet balance to complete the payment.</p>
+    <button onclick="completePayment()">Pay with Wallet</button>
+  </div>
+  <script>
+    function completePayment() {
+      alert("Payment successful! Your wallet balance has been deducted.");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

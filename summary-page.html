@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Summary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Summary</h1>
+        <div id="shipping-details">
+          <h2>Shipping Details</h2>
+          <p id="name"></p>
+          <p id="address"></p>
+          <p id="city"></p>
+          <p id="state"></p>
+          <p id="postal-code"></p>
+          <p id="phone"></p>
+          <a href="shipping.html" class="edit-link">Edit Shipping Details</a>
+        </div>
+        <div id="order-details">
+          <h2>Order Details</h2>
+          <p><strong>Product:</strong> Tecno Spark 8</p>
+          <p><strong>Price:</strong> $120</p>
+          <a href="shop.html" class="edit-link">Edit Order</a>
+        </div>
+        <button onclick="proceedToPayment()">Proceed to Payment</button>
+      </div>
+      
+  <script src="scripts.js">
+    document.addEventListener('DOMContentLoaded', () => {
+      const shippingDetails = JSON.parse(localStorage.getItem('shippingDetails'));
+
+      if (shippingDetails) {
+        document.getElementById('name').textContent = `Name: ${shippingDetails['full-name']}`;
+        document.getElementById('address').textContent = `Address: ${shippingDetails.address}`;
+        document.getElementById('city').textContent = `City: ${shippingDetails.city}`;
+        document.getElementById('state').textContent = `State: ${shippingDetails.state}`;
+        document.getElementById('postal-code').textContent = `Postal Code: ${shippingDetails['postal-code']}`;
+        document.getElementById('phone').textContent = `Phone: ${shippingDetails.phone}`;
+      }
+    });
+
+    function proceedToPayment() {
+      window.location.href = "payment.html"; // Redirect to payment page
+    }
+  </script>
+</body>
+</html>
